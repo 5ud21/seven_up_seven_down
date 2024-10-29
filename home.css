@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #1f1f1f; /* Dark theme background */
+    color: #e6e6e6; /* Light text */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333; /* Darker navbar */
+    height: 8%;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Navbar shadow */
+}
+
+.navbar-div {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    padding: 20px;
+    width: 100%;              
+}
+
+.navbar-div h2 {
+    color: #fff;              
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;                
+    text-align: center;
+    flex-wrap: wrap;   
+}
+
+.navbar-div img {
+    height: 50px;
+    width: auto;
+    vertical-align: middle;
+}
+
+section {
+    width: 80%;
+    margin-top: 3.5%;
+    padding: 5%;
+}
+
+.game-rules {
+    text-align: center;
+    position: relative;
+    left:3.8%;
+    border: 2px solid #ffde7d;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #2b2b2b;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.game-rules:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.game-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ffde7d;
+    color: #333333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e6c46d;
+}
+
+
+@media (max-width: 1200px) {
+    .navbar-div {
+        width: 70%;
+    }
+    .game-rules {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-div {
+        width: 80%;
+    }
+    section {
+        width: 90%;
+        padding: 2%;
+    }
+    .navbar-div h2 {
+        font-size: 18px;        /* Reduce font size on smaller screens */
+    }
+
+    .navbar-div img {
+        height: 40px;           
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-div {
+        width: 90%;
+    }
+    .navbar-div h2 {
+        font-size: 16px;
+    }
+    .navbar-div img {
+        height: 35px;
+    }
+    .game-rules {
+        padding: 10px;
+    }
+    button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
